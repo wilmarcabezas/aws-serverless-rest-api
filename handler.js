@@ -24,7 +24,7 @@ module.exports.createNote = async (event, context, cb) => {
     await documentClient.put(params).promise();
     cb(null, send(201, data));
   } catch (err) {
-    cb(null, send(500, err.message));
+    cb(null, send(501, err.message));
   }
 };
 
